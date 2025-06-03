@@ -23,7 +23,7 @@ interface PersonalData {
   name: string;
   title: string;
   bio: string;
-  image?: string;
+  image: string;
   contact: {
     email: string;
     phone: string;
@@ -64,13 +64,14 @@ interface Organization {
 // Sample data - ganti dengan data Anda
 const personalData: PersonalData = {
   name: "Moratua Putra Pardede",
-  title: "Full Stack Developer & Digital Pirate",
+  title: "Full Stack Developer & UI/UX Enthusiast",
+  image: "/images/mora.jpg", 
   bio: "Ahoy! Saya seorang developer yang berlayar di lautan digital, mencari harta berupa kode yang elegan dan solusi yang inovatif. Dengan pengalaman bertahun-tahun mengarungi berbagai teknologi, saya siap membantu Anda menaklukkan tantangan digital.",
   contact: {
     email: "moratuaputra@gmail.com",
-    phone: "+62 812-3456-7890",
+    phone: "+62 821-7553-0365",
     github: "kazuhikoakiraa",
-    linkedin: "Moratua Putra",
+    linkedin: "moratua-putra-pardede-23102a223",
     location: "Bandar Lampung, Indonesia"
   }
 };
@@ -96,20 +97,48 @@ const educationData: Education[] = [
 const projectData: Project[] = [
   {
     id: "1",
-    name: "E-Commerce Pirates Bay",
-    description: "Platform e-commerce lengkap dengan sistem pembayaran, inventory management, dan dashboard admin",
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Stripe"],
-    period: "Jan 2024 - Mar 2024",
+    name: "Website Wisata Way Kalam",
+    description: "Website desa wisata way kalam dibuat untuk mempromosikan potensi wisata desa dan menyediakan informasi lengkap bagi pengunjung.",
+    technologies: ["Javascript","Tailwindcss", "MySql"],
+    period: "Jan 2024 - Jan 2024",
     status: "completed",
-    link: "https://github.com/yourproject"
+    link: "https://github.com/Tematik-Way-Kalam/Website-Wisata-WayKalam"
   },
   {
     id: "2",
-    name: "Treasure Map Mobile App",
-    description: "Aplikasi mobile untuk tracking lokasi dan navigasi menggunakan React Native",
-    technologies: ["React Native", "Firebase", "Google Maps API"],
-    period: "Apr 2024 - Ongoing",
-    status: "ongoing"
+    name: "Website Inventory PT. Sumber Indah Perkasa",
+    description: "Sistem informasi inventory untuk PT. Sumber Indah Perkasa yang memudahkan pengelolaan data mesin dan suku cadang.",
+    technologies: ["Laravel", "Tailwindcss", "MySql"],
+    period: "Jul 2024 - Aug 2024",
+    status: "completed",
+    link: "https://github.com/kazuhikoakiraa/SIP"
+  },
+  {
+    id: "3",
+    name: "Website Point Of Sales (POS) Kopi Hitado",
+    description: "Sistem informasi Point Of Sales untuk Kopi Hitado yang memudahkan transaksi penjualan dan pengelolaan data transaksi.",
+    technologies: ["Laravel", "MySql", "Tailwindcss"],
+    period: "Feb 2024 - Jun 2024",
+    status: "completed",
+    link: "https://github.com/kazuhikoakiraa/webhitado"
+  },
+  {
+    id: "4",
+    name: "Website Pembukuan Keuangan PT. Sentra Alam Anandana",
+    description: "Sistem informasi pembukuan keuangan untuk PT. Sentra Alam Anandana yang memudahkan pengelolaan data keuangan perusahaan.",
+    technologies: ["Laravel", "Filament", "MySql"],
+    period: "Apr 2025 - Ongoing",
+    status: "ongoing",
+    link: "https://github.com/kazuhikoakiraa/sistem-po"
+  },
+  {
+    id: "5",
+    name: "Website Portofolio Pribadi",
+    description: "Website portofolio pribadi yang menampilkan berbagai proyek dan pengalaman saya sebagai developer.",
+    technologies: ["Next.js", "Tailwindcss", "TypeScript"],
+    period: "May 2025 - Ongoing",
+    status: "ongoing",
+    link: "https://github.com/kazuhikoakiraa/portofolio"
   }
 ];
 
@@ -231,7 +260,7 @@ export default function PiratePortfolio() {
               whileHover={{ scale: 1.05 }}
             >
               <Ship className="w-8 h-8 text-yellow-400" />
-              <span className="text-xl font-bold text-yellow-400">Captain's Portfolio</span>
+              <span className="text-xl font-bold text-yellow-400">Mora's Portfolio</span>
             </motion.div>
             
             <div className="hidden md:flex space-x-6">
@@ -281,7 +310,7 @@ export default function PiratePortfolio() {
             style={{ y: springY }}
           >
             <div className="w-full h-full flex items-center justify-center text-6xl">
-              🏴‍☠️
+              <img src={personalData.image} alt="gambar mora" />
             </div>
           </motion.div>
           
@@ -870,12 +899,6 @@ export default function PiratePortfolio() {
       >
         <Anchor className="w-6 h-6" />
       </motion.button>
-
-      {/* Scroll Progress Indicator */}
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 transform origin-left z-50"
-        style={{ scaleX: scrollYProgress }}
-      />
     </div>
   );
 }

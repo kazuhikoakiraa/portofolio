@@ -5,19 +5,19 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Captain\'s Portfolio - Digital Pirate Developer',
+  title: 'Mora\'s Portfolio - Full-Stack Developer',
   description: 'Portfolio website of a skilled full-stack developer with pirate theme. Explore projects, skills, and adventures in the digital seas.',
   keywords: ['developer', 'portfolio', 'full-stack', 'react', 'next.js', 'typescript'],
-  authors: [{ name: 'Captain Developer' }],
+  authors: [{ name: 'Moratua Putra' }],
   openGraph: {
-    title: 'Captain\'s Portfolio - Digital Pirate Developer',
+    title: 'Mora\'s Portfolio - Full-Stack Developer',
     description: 'Ahoy! Welcome to the digital adventures of a skilled developer',
     type: 'website',
     locale: 'id_ID',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Captain\'s Portfolio',
+    title: 'Mora\'s Portfolio',
     description: 'Digital Pirate Developer Portfolio',
   },
   // Hapus viewport dari sini

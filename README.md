@@ -226,11 +226,11 @@ pirate-portfolio/
 ├── public/
 │   ├── images/          # Gambar dan aset
 │   └── favicon.ico      # Icon website
-├── src/
-│   └── app/
-│       ├── globals.css  # Style global
-│       ├── layout.tsx   # Layout utama
-│       └── page.tsx     # Halaman utama
+├── app/
+│   ├── globals.css  # Style global
+│   ├── layout.tsx   # Layout utama
+│   └── page.tsx     # Halaman utama
+│       
 ├── package.json         # Dependencies
 ├── tailwind.config.js   # Konfigurasi Tailwind
 ├── tsconfig.json        # Konfigurasi TypeScript
