@@ -279,6 +279,4 @@ Kontribusi sangat diterima! Silakan buat issue atau pull request.
 ## 📞 Support
 
 Jika ada pertanyaan atau butuh bantuan, silakanhubungi saya di 
-[GitHub](https://github.com/kazuhikoakiraa) atau [email][emailContact]
-
-[emailContact]: moratuaputra@gmail.com
+[GitHub](https://github.com/kazuhikoakiraa)
