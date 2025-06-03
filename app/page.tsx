@@ -66,7 +66,7 @@ const personalData: PersonalData = {
   name: "Moratua Putra Pardede",
   title: "Full Stack Developer & UI/UX Enthusiast",
   image: "/images/mora.jpg", 
-  bio: "Ahoy! Saya seorang developer yang berlayar di lautan digital, mencari harta berupa kode yang elegan dan solusi yang inovatif. Dengan pengalaman bertahun-tahun mengarungi berbagai teknologi, saya siap membantu Anda menaklukkan tantangan digital.",
+  bio: "Ahoy! Saya seorang developer yang berlayar di lautan digital, mencari harta berupa kode yang elegan dan solusi yang inovatif.",
   contact: {
     email: "moratuaputra@gmail.com",
     phone: "+62 821-7553-0365",
@@ -84,13 +84,6 @@ const educationData: Education[] = [
     period: "2021 - Now",
     gpa: "3.22",
     description: "Fokus pada pengembangan web dan ui/ux design."
-  },
-  {
-    id: "2",
-    institution: "SMA Sint Caraolus Bengkulu",
-    degree: "IPA",
-    period: "2018 - 2021",
-    description: "Juara VI Tingkat Nasional Festival Musikalisasi Puisi"
   }
 ];
 
@@ -146,21 +139,16 @@ const organizationData: Organization[] = [
   {
     id: "1",
     name: "Himpunan Mahasiswa Teknik Informatika",
-    position: "Ketua Divisi IT",
-    period: "2022 - 2023",
-    description: "Memimpin tim pengembangan sistem informasi untuk keperluan organisasi",
-    achievements: [
-      "Mengembangkan website resmi organisasi",
-      "Mengelola 15+ anggota divisi IT",
-      "Mengadakan workshop programming untuk 200+ peserta"
-    ]
+    position: "Koordinator Dewan Perwakilan Anggota (DPA)",
+    period: "2024 - 2025",
+    description: "Memimpin dewan perwakilan anggota untuk menyuarakan aspirasi mahasiswa teknik informatika serta mengawasi jalannya roda Himpunan."
   },
   {
     id: "2",
-    name: "Google Developer Student Club",
-    position: "Core Team Member",
+    name: "Himpunan Mahasiswa Teknik Informatika",
+    position: "Staff Pengawasan",
     period: "2023 - 2024",
-    description: "Aktif dalam komunitas developer dan mengadakan berbagai event teknologi"
+    description: "Mengawasi secara aktif jalannya program kerja Himpunan Mahasiswa Teknik Informatika, memastikan semua kegiatan berjalan sesuai rencana."
   }
 ];
 
@@ -420,11 +408,11 @@ export default function PiratePortfolio() {
                   <h3 className="text-xl font-semibold text-yellow-400 mb-4">Keahlian Navigasi</h3>
                   <div className="space-y-3">
                     {[
-                      'Frontend Development (React, Next.js, Vue.js)',
-                      'Backend Development (Node.js, Python, PHP)',
-                      'Database Management (PostgreSQL, MongoDB)',
-                      'Mobile Development (React Native, Flutter)',
-                      'DevOps & Cloud (Docker, AWS, Google Cloud)'
+                      'Frontend Development (React, Next.js, Tailwind CSS)',
+                      'Backend Development (Laravel, PHP)',
+                      'Database Management (PostgreSQL, MySQL)',
+                      'Version Control (Git, GitHub)',
+                      'UI/UX Design (Figma)',
                     ].map((skill, index) => (
                       <motion.div
                         key={index}
@@ -826,7 +814,7 @@ export default function PiratePortfolio() {
               whileHover={{ scale: 1.05 }}
             >
               <Ship className="w-6 h-6 text-yellow-400" />
-              <span className="text-xl font-bold text-yellow-400">Captain's Portfolio</span>
+              <span className="text-xl font-bold text-yellow-400">Mora's Portfolio</span>
             </motion.div>
             
             <p className="text-gray-400 mb-4">
@@ -878,7 +866,7 @@ export default function PiratePortfolio() {
             </div>
             
             <p className="text-gray-500 text-sm">
-              © 2024 {personalData.name}. Dibuat dengan ❤️ dan ☕
+              © 2025 {personalData.name}. Dibuat dengan ❤️ dan ☕
             </p>
           </motion.div>
         </div>
