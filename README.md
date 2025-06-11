@@ -1,282 +1,223 @@
-# 🏴‍☠️ Captain's Portfolio - Pirate Themed Developer Portfolio
+# Portfolio Website
 
-Portfolio website dengan tema bajak laut yang dibangun menggunakan Next.js 15, TypeScript, dan Framer Motion untuk animasi 3D yang menakjubkan.
+A modern, interactive portfolio website built with Next.js 15, featuring smooth animations, magnetic effects, and a responsive design. This portfolio showcases my projects, education, and professional experience as a Full Stack Developer.
 
-## ✨ Fitur Utama
+## ✨ Features
 
-- **🎬 Animasi 3D & Motion**: Menggunakan Framer Motion untuk animasi yang smooth dan interaktif
-- **🏴‍☠️ Tema Bajak Laut**: Design unik dengan elemen-elemen bajak laut yang keren
-- **📱 Responsive Design**: Tampil sempurna di semua device
-- **⚡ Performance Optimized**: Dibangun dengan Next.js 15 untuk performa maksimal
-- **🎨 Modern UI/UX**: Glassmorphism, gradients, dan micro-interactions
-- **♿ Accessibility**: Support untuk screen readers dan keyboard navigation
-- **🌙 Dark Theme**: Theme gelap yang nyaman untuk mata
+- **Modern Design**: Clean, minimalist design with glassmorphism effects
+- **Smooth Animations**: Powered by Framer Motion for buttery smooth interactions
+- **Magnetic Effects**: Interactive elements with magnetic hover effects
+- **Responsive**: Fully responsive design that works on all devices
+- **Interactive Navigation**: Smooth scrolling navigation with active section indicators
+- **Dynamic Content**: Easy to update personal information, projects, and experience
+- **Performance Optimized**: Built with Next.js 15 for optimal performance
 
 ## 🛠️ Tech Stack
 
 - **Framework**: Next.js 15
-- **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Animations**: Framer Motion
 - **Icons**: Lucide React
-- **Font**: Inter (Google Fonts)
+- **Language**: TypeScript
+- **Deployment**: Vercel (recommended)
 
-## 🚀 Quick Start
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 18.17 atau lebih baru
-- npm atau yarn atau pnpm
+Make sure you have Node.js 18+ installed on your machine.
 
 ### Installation
 
-1. **Clone atau download project**
+1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd pirate-portfolio
+git clone https://github.com/kazuhikoakiraa/portofolio.git
+cd portofolio
 ```
 
-2. **Install dependencies**
+2. Install dependencies:
 ```bash
 npm install
-# atau
+# or
 yarn install
-# atau
+# or
 pnpm install
 ```
 
-3. **Jalankan development server**
+3. Run the development server:
 ```bash
 npm run dev
-# atau
+# or
 yarn dev
-# atau
+# or
 pnpm dev
 ```
 
-4. **Buka browser**
-   Navigasi ke [http://localhost:3000](http://localhost:3000)
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-## 📝 Kustomisasi
+## 📁 Project Structure
 
-### 1. Data Personal
+```
+portfolio/
+├── app/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── public/
+│   └── images/
+│       └── mora.jpg
+├── components/
+├── package.json
+├── tailwind.config.js
+├── next.config.js
+└── README.md
+```
 
-Edit file `src/app/page.tsx` pada bagian data berikut:
+## 🎨 Customization
+
+### Personal Information
+
+Update your personal information in the `personalData` object in `app/page.tsx`:
 
 ```typescript
 const personalData: PersonalData = {
-  name: "Captain [Nama Anda]", // Ganti dengan nama Anda
-  title: "Full Stack Developer & Digital Pirate", // Ganti dengan title Anda
-  bio: "Deskripsi tentang Anda...", // Ganti dengan bio Anda
+  name: "Your Name",
+  title: "Your Title",
+  image: "/images/your-photo.jpg",
+  bio: "Your bio description...",
   contact: {
-    email: "your-email@domain.com", // Email Anda
-    phone: "+62 812-3456-7890", // Nomor telepon Anda
-    github: "yourgithub", // Username GitHub
-    linkedin: "yourlinkedin", // Username LinkedIn
-    location: "Kota Anda, Indonesia" // Lokasi Anda
+    email: "your.email@example.com",
+    phone: "+your-phone-number",
+    github: "your-github-username",
+    linkedin: "your-linkedin-username",
+    location: "Your Location"
   }
 };
 ```
 
-### 2. Data Pendidikan
+### Projects
 
-```typescript
-const educationData: Education[] = [
-  {
-    id: "1",
-    institution: "Nama Universitas", // Nama institusi
-    degree: "Gelar Anda", // Gelar yang diperoleh
-    period: "2020 - 2024", // Periode pendidikan
-    gpa: "3.85", // IPK (opsional)
-    description: "Deskripsi singkat" // Deskripsi tambahan
-  }
-  // Tambahkan data pendidikan lainnya
-];
-```
-
-### 3. Data Proyek
+Add or modify projects in the `projectData` array:
 
 ```typescript
 const projectData: Project[] = [
   {
     id: "1",
-    name: "Nama Proyek", // Nama proyek
-    description: "Deskripsi proyek...", // Deskripsi detail
-    technologies: ["Next.js", "TypeScript"], // Teknologi yang digunakan
-    period: "Jan 2024 - Mar 2024", // Periode pengerjaan
-    status: "completed", // Status: completed, ongoing, planned
-    link: "https://github.com/yourproject" // Link proyek (opsional)
-  }
-  // Tambahkan proyek lainnya
+    name: "Project Name",
+    description: "Project description...",
+    technologies: ["React", "Next.js", "Tailwind CSS"],
+    period: "Jan 2024",
+    status: "completed",
+    link: "https://github.com/username/project"
+  },
+  // Add more projects...
 ];
 ```
 
-### 4. Data Organisasi
+### Education
+
+Update your educational background in the `educationData` array:
+
+```typescript
+const educationData: Education[] = [
+  {
+    id: "1",
+    institution: "Your University",
+    degree: "Your Degree",
+    period: "2021 - Present",
+    gpa: "3.22",
+    description: "Your focus area..."
+  }
+];
+```
+
+### Organizations
+
+Add your organizational experience in the `organizationData` array:
 
 ```typescript
 const organizationData: Organization[] = [
   {
     id: "1",
-    name: "Nama Organisasi", // Nama organisasi
-    position: "Jabatan Anda", // Posisi/jabatan
-    period: "2022 - 2023", // Periode keterlibatan
-    description: "Deskripsi peran...", // Deskripsi peran
-    achievements: [ // Pencapaian (opsional)
-      "Pencapaian 1",
-      "Pencapaian 2"
-    ]
+    name: "Organization Name",
+    position: "Your Position",
+    period: "2024 - 2025",
+    description: "Description of your role and responsibilities..."
   }
-  // Tambahkan organisasi lainnya
 ];
 ```
 
-### 5. Menambahkan Foto
+## 🎯 Key Components
 
-1. Tambahkan foto Anda ke folder `public/images/`
-2. Update `personalData.image` dengan path foto:
-```typescript
-const personalData: PersonalData = {
-  // ... data lainnya
-  image: "/images/your-photo.jpg" // Path ke foto Anda
-};
-```
+### Magnetic Effect Hook
+The portfolio includes a custom `useMagneticEffect` hook that creates interactive magnetic hover effects on elements.
 
-## 🎨 Kustomisasi Styling
+### Smooth Animations
+All animations are powered by Framer Motion, including:
+- Page transitions
+- Scroll-triggered animations
+- Hover effects
+- Loading animations
 
-### Warna Tema
+### Responsive Navigation
+- Desktop: Horizontal navigation bar
+- Mobile: Hamburger menu with smooth transitions
 
-Edit file `src/app/globals.css` untuk mengubah warna tema:
+## 📱 Responsive Design
 
-```css
-:root {
-  --accent-gold: 251, 146, 60; /* Warna emas */
-  --accent-yellow: 250, 204, 21; /* Warna kuning */
-}
-```
+The portfolio is fully responsive and optimized for:
+- Desktop (1024px+)
+- Tablet (768px - 1023px)
+- Mobile (320px - 767px)
 
-### Animasi Custom
+## 🚀 Deployment
 
-Tambahkan animasi custom di `globals.css`:
+### Deploy to Vercel
 
-```css
-@keyframes your-animation {
-  0% { /* start state */ }
-  100% { /* end state */ }
-}
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
 
-.your-class {
-  animation: your-animation 2s ease-in-out infinite;
-}
-```
+1. Push your code to GitHub
+2. Import your repository on Vercel
+3. Deploy automatically
 
-## 📱 Mobile Optimization
+### Deploy to Netlify
 
-Website sudah dioptimasi untuk mobile dengan:
-- Responsive breakpoints
-- Touch-friendly interactions
-- Optimized font sizes
-- Mobile-first approach
-
-## ♿ Accessibility Features
-
-- Semantic HTML structure
-- ARIA labels dan roles
-- Keyboard navigation support
-- Screen reader compatibility
-- High contrast mode support
-- Reduced motion support
-
-## 🔧 Build & Deployment
-
-### Build untuk Production
-
+1. Build the project:
 ```bash
 npm run build
-# atau
-yarn build
-# atau
-pnpm build
 ```
 
-### Start Production Server
+2. Upload the `out` folder to Netlify
 
-```bash
-npm start
-# atau
-yarn start
-# atau
-pnpm start
-```
+### Deploy to Other Platforms
 
-### Deploy ke Vercel
+The portfolio can be deployed to any platform that supports static hosting:
+- GitHub Pages
+- Firebase Hosting
+- AWS S3
+- DigitalOcean App Platform
 
-1. Push code ke GitHub repository
-2. Connect repository ke [Vercel](https://vercel.com)
-3. Deploy otomatis akan berjalan
+## 🔧 Available Scripts
 
-### Deploy ke Netlify
-
-1. Build project: `npm run build`
-2. Upload folder `out` ke [Netlify](https://netlify.com)
-
-## 📦 Struktur Folder
-
-```
-pirate-portfolio/
-├── public/
-│   ├── images/          # Gambar dan aset
-│   └── favicon.ico      # Icon website
-├── app/
-│   ├── globals.css  # Style global
-│   ├── layout.tsx   # Layout utama
-│   └── page.tsx     # Halaman utama
-│       
-├── package.json         # Dependencies
-├── tailwind.config.js   # Konfigurasi Tailwind
-├── tsconfig.json        # Konfigurasi TypeScript
-└── next.config.js       # Konfigurasi Next.js
-```
-
-## 🚀 Performance Tips
-
-1. **Optimasi Gambar**: Gunakan format WebP dan lazy loading
-2. **Code Splitting**: Gunakan dynamic imports untuk komponen besar
-3. **Caching**: Leverage Next.js caching untuk static assets
-4. **Bundle Analysis**: Gunakan `@next/bundle-analyzer`
-
-## 🐛 Troubleshooting
-
-### Error: Module not found
-
-```bash
-# Pastikan semua dependencies terinstall
-npm install
-
-# Clear cache jika perlu
-npm run build -- --no-cache
-```
-
-### Animation tidak smooth
-
-1. Periksa device performance
-2. Reduce animation complexity
-3. Enable `prefers-reduced-motion` support
-
-### Styling tidak muncul
-
-1. Pastikan Tailwind CSS ter-compile dengan benar
-2. Check browser dev tools untuk CSS conflicts
-3. Verify import order di `globals.css`
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
 ## 📄 License
 
-MIT License - Silakan gunakan untuk proyek personal atau komersial.
+This project is open source and available under the [MIT License](LICENSE).
 
 ## 🤝 Contributing
 
-Kontribusi sangat diterima! Silakan buat issue atau pull request.
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/kazuhikoakiraa/portofolio/issues).
 
-## 📞 Support
+## 📞 Contact
 
-Jika ada pertanyaan atau butuh bantuan, silakanhubungi saya di 
-[GitHub](https://github.com/kazuhikoakiraa)
+- **Email**: moratuaputra@gmail.com
+- **GitHub**: [@kazuhikoakiraa](https://github.com/kazuhikoakiraa)
+- **LinkedIn**: [moratua-putra-pardede](https://linkedin.com/in/moratua-putra-pardede-23102a223)
+
+---
+
+⭐ Star this repo if you find it helpful!
