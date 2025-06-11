@@ -164,71 +164,6 @@ const organizationData: Organization[] = [
   }
 ];
 
-// Floating Icons Component
-const FloatingIcon = ({ icon: Icon, delay = 0, duration = 8 }: { icon: any, delay?: number, duration?: number }) => {
-  return (
-    <motion.div
-      className="absolute text-white/10 pointer-events-none"
-      initial={{ 
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
-        opacity: 0 
-      }}
-      animate={{ 
-        y: [0, -30, 0],
-        opacity: [0, 0.6, 0],
-        rotate: [0, 360]
-      }}
-      transition={{
-        duration: duration,
-        repeat: Infinity,
-        delay: delay,
-        ease: "easeInOut"
-      }}
-    >
-      <Icon size={24} />
-    </motion.div>
-  );
-};
-
-// Particle System Component
-const ParticleSystem = () => {
-  const particles = Array.from({ length: 50 }, (_, i) => ({
-    id: i,
-    x: Math.random() * 100,
-    y: Math.random() * 100,
-    size: Math.random() * 2 + 1,
-    delay: Math.random() * 5
-  }));
-
-  return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden">
-      {particles.map((particle) => (
-        <motion.div
-          key={particle.id}
-          className="absolute bg-white/20 rounded-full"
-          style={{
-            left: `${particle.x}%`,
-            top: `${particle.y}%`,
-            width: particle.size,
-            height: particle.size,
-          }}
-          animate={{
-            y: [-20, -100, -20],
-            opacity: [0.2, 0.8, 0.2],
-            scale: [1, 1.5, 1]
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            delay: particle.delay,
-            ease: "easeInOut"
-          }}
-        />
-      ))}
-    </div>
-  );
-};
 
 // Magnetic Effect Hook
 const useMagneticEffect = () => {
@@ -330,21 +265,6 @@ export default function EnhancedPortfolio() {
 
   return (
     <div ref={containerRef} className="bg-gray-900 text-white min-h-screen relative overflow-hidden">
-      
-      {/* Particle System */}
-      <ParticleSystem />
-      
-      {/* Floating Icons */}
-      <div className="fixed inset-0 pointer-events-none z-0">
-        {floatingIcons.map((Icon, index) => (
-          <FloatingIcon 
-            key={index} 
-            icon={Icon} 
-            delay={index * 0.5} 
-            duration={8 + index * 0.5}
-          />
-        ))}
-      </div>
 
       {/* Custom Cursor */}
       <motion.div
