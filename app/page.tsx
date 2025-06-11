@@ -1190,6 +1190,49 @@ export default function EnhancedPortfolio() {
           </div>
         </div>
       </section>
+      {/* Footer */}
+      <footer className="relative z-20 py-10 bg-gray-900 border-t border-white/10 mt-12">
+        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex items-center space-x-3">
+            <User className="w-6 h-6 text-blue-400" />
+            <span className="text-white font-semibold text-lg">{personalData.name}</span>
+          </div>
+          <div className="flex items-center space-x-6">
+            {personalData.contact.github && (
+              <a
+                href={`https://github.com/${personalData.contact.github}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="GitHub"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+            )}
+            {personalData.contact.linkedin && (
+              <a
+                href={`https://linkedin.com/in/${personalData.contact.linkedin}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+            )}
+            <a
+              href={`mailto:${personalData.contact.email}`}
+              className="text-gray-400 hover:text-white transition-colors"
+              aria-label="Email"
+            >
+              <Mail className="w-5 h-5" />
+            </a>
+          </div>
+          <div className="text-gray-400 text-sm text-center md:text-right">
+            &copy; {new Date().getFullYear()} {personalData.name}. All rights reserved.
+          </div>
+        </div>
+      </footer>
 
       {/* Scroll to Top Button */}
       <motion.button
@@ -1211,32 +1254,6 @@ export default function EnhancedPortfolio() {
           <ArrowUp className="w-5 h-5" />
         </motion.div>
       </motion.button>
-
-      {/* Floating Action Elements */}
-      <div className="fixed left-8 top-1/2 transform -translate-y-1/2 z-30 hidden lg:block">
-        <div className="space-y-4">
-          {[
-            { icon: Coffee, delay: 0 },
-            { icon: Heart, delay: 0.2 },
-            { icon: Sparkles, delay: 0.4 },
-          ].map(({ icon: Icon, delay }, index) => (
-            <motion.div
-              key={index}
-              className="w-10 h-10 bg-white/5 backdrop-blur-sm rounded-full flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 transition-all cursor-pointer border border-white/10"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 3 + delay }}
-              whileHover={{ 
-                scale: 1.2,
-                rotate: 360,
-                boxShadow: "0 5px 20px rgba(255,255,255,0.1)"
-              }}  
-            >
-              <Icon className="w-5 h-5" />
-            </motion.div>
-          ))}
-        </div>
-      </div>
 
       {/* Progress Indicator */}
       <motion.div
