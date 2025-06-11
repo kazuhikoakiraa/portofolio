@@ -1190,48 +1190,13 @@ export default function EnhancedPortfolio() {
           </div>
         </div>
       </section>
+
+
       {/* Footer */}
       <footer className="relative z-20 py-10 bg-gray-900 border-t border-white/10 mt-12">
-        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center space-x-3">
-            <User className="w-6 h-6 text-blue-400" />
-            <span className="text-white font-semibold text-lg">{personalData.name}</span>
-          </div>
-          <div className="flex items-center space-x-6">
-            {personalData.contact.github && (
-              <a
-                href={`https://github.com/${personalData.contact.github}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-                aria-label="GitHub"
-              >
-                <Github className="w-5 h-5" />
-              </a>
-            )}
-            {personalData.contact.linkedin && (
-              <a
-                href={`https://linkedin.com/in/${personalData.contact.linkedin}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-            )}
-            <a
-              href={`mailto:${personalData.contact.email}`}
-              className="text-gray-400 hover:text-white transition-colors"
-              aria-label="Email"
-            >
-              <Mail className="w-5 h-5" />
-            </a>
-          </div>
-          <div className="text-gray-400 text-sm text-center md:text-right">
+          <div className="text-gray-400 text-sm text-center md:text-center">
             &copy; {new Date().getFullYear()} {personalData.name}. All rights reserved.
           </div>
-        </div>
       </footer>
 
       {/* Scroll to Top Button */}
