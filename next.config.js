@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
+  experimental: {
+    // Hapus atau komentari konfigurasi experimental yang tidak valid
+  },
   images: {
     domains: ['localhost'],
   },
-  // Removed deprecated experimental.appDir since it's default in Next.js 13+
 }
 
 module.exports = nextConfig
